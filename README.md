@@ -11,4 +11,4 @@ This Console game is Called **World Of Adventures**. It's a game where the user 
 This game was created with C# language.Factory has been used to create the bots.
 
 ### Demo
-![World Of Adventures Demo](WorldOfAdventures.gif)
+![Hotel-Search2Stay](HotelSearch2Stay.gif)
