@@ -1,0 +1,86 @@
+﻿@model Hotel.Models.BookingModel
+
+@{
+    ViewData["Title"] = "View Room";
+} 
+
+<div class="container container-fluid results1 ">
+  <div class="col-md-12 ">
+    <div class="row">
+      <div id="title">
+        <p id="roomname">@(Model.RoomDetails.Details.Name) - @(Model.RoomDetails.Details.Location)</p>
+
+          
+              <p id="demo"> 
+                    <span class="fa fa-star" ></span>
+                    <span class="fa fa-star" ></span>
+                    <span class="fa fa-star" ></span>
+                    <span class="fa fa-star" ></span>
+                    <span class="fa fa-star" ></span>
+              </p>
+          
+          <div id="room-images">
+          <img id="room-images" src="~/image/@(Model.RoomDetails.Details.Photo)">
+          </div>
+      </div>
+      <div class="room-infos">
+        <p>COUNT OF GUESTS <br>@(Model.RoomDetails.Details.CountOfGuests)</p>
+        <p>TYPE OF ROOM<br>@(Model.RoomDetails.Details.RoomType)</p>
+        <p>PARKING <br>@(Model.RoomDetails.Details.Parking)</p>
+        <p>WIFI <br>@(Model.RoomDetails.Details.Wifi)</p>
+        <p>PET FRIENDLY <br>@(Model.RoomDetails.Details.PetFriendly)</p>
+      </div>
+      <div class="description">
+        <h2>Room Description</h2><p>@(Model.RoomDetails.Details.LongDescription)</p>
+      </div>
+      <div id="dash"></div>
+    </div>
+
+    <a class="room-list-more-btn" asp-route-checkin="@Model.CheckInDate" asp-route-checkout="@Model.CheckOutDate" asp-route-roomId="@Model.RoomDetails.Details.RoomId" asp-action="Book"  >Book this Room</a><br><br>
+    <a  class="favor-btn" id="myBtn" asp-route-checkin="@Model.CheckInDate" onclick="myFunction()" asp-route-checkout="@Model.CheckOutDate" asp-route-roomId="@Model.RoomDetails.Details.RoomId" asp-action="Favorite"  ><i class="far fa-heart"></i>Favorite</a>
+  <div id="review">
+    <form  asp-action="Room" >
+
+      <h2>Add Review</h2>
+      <br>
+      <ul>
+        <li class="stars"><span class="fa fa-star fa-sm" id="star-1"></span></li>
+        <li class="stars"><span class="fa fa-star fa-sm" id="star-2"></span></li>
+        <li class="stars"><span class="fa fa-star fa-sm" id="star-3"></span></li>
+        <li class="stars"><span class="fa fa-star fa-sm" id="star-4"></span></li>
+        <li class="stars"><span class="fa fa-star fa-sm" id="star-5"></span></li>
+      </ul> 
+
+      <input style="visibility: hidden;" name="starreview" type="text" id="rating">
+        <input style="visibility: hidden;" value="@Model.RoomDetails.Details.RoomId" name="roomid" type="text" id="rating">
+        <input style="visibility: hidden;" value="@Model.CheckInDate" name="checkin" type="text" id="rating">
+        <input style="visibility: hidden;" value="@Model.CheckOutDate" name="checkout" type="text" id="rating">
+
+        <input type="text"  name="comment" id="comment" name="addreview">
+
+        <button type="submit" id="room-btn" class="btn btn-outline-primary">Enter</button>
+    </form>
+
+    <h2>Reviews</h2>
+    @foreach (var review in Model.RoomDetails.Reviews)
+          {
+              <p id="newreview"><p class="reviewer">Review from User</p>
+                
+                @for (int i = 0; i < review.Rate; i++)
+                {
+                    <span  class="fa fa-star star-size" ></span>
+  
+                }
+                <br>
+                <span>@review.Text</span>
+                
+              </p>
+          }
+          <a style="visibility: hidden;" href="#">Login to Review</a><br>
+   </div>
+</div>
+</div>
+
+
+    
+  

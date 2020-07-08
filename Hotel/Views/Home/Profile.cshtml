@@ -1,0 +1,91 @@
+@model Hotel.Models.ProfileModel
+
+@{
+    ViewData["Title"] = "Profile";
+} 
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 favorite">
+      <h4>FAVORITES</h4>
+      @foreach (var item in Model.Favorite)
+      {
+          @foreach (var item1 in Model.Details)
+       {
+         @if(item.RoomId == item1.RoomId)
+           {
+      <ul class="lis">
+        <li>@(item1.Name)</li>
+        
+      </ul>
+           }
+       }
+      }
+      <h4>REVIEWS</h4>
+      @foreach (var item1 in Model.Review)
+      {
+         @foreach (var item in Model.Details)
+       {
+         @if(item.RoomId == item1.RoomId)
+           {
+      <ul class="lis">
+        <li>@(item.Name)</li>
+
+         @for (int i = 0; i < item1.Rate; i++)
+                {
+                    <span class="fa fa-star" ></span>
+                }
+      </ul>
+           }
+       }
+      }
+       
+    </div>
+   
+ <div class="col-md-8">
+    <h5 id="mybookings">My bookings</h5>
+   
+  @foreach (var item in Model.Bookingid)
+   {
+       @foreach (var item1 in Model.Details)
+       {
+           @if(item.RoomId == item1.RoomId)
+           {
+        
+  
+  
+    <div class="row block">
+      <div class="col-md-2">
+        <img class="room_images" src="~/image/@(item1.Photo)">
+        <p class="nightprice">Total Cost:@(item1.Price)</p>
+      </div>
+      <div class="col-md-10">
+        <h2>@(item1.Name) 
+         </h2>
+        <p class="location">
+          @(item1.Location)
+        </p>
+        <p class="descripton">
+          @(item1.LongDescription)
+        </p>
+        
+        <div class="box"><p class="infos">Count of Guests:@(item1.CountOfGuests)</p><p class="infos">Room Type:@(item1.RoomType)</p></div>
+        <div class="box1"><p class="infos">Check In:@(item.CheckInDate)</p></div>
+        <div class="box1"><p class="infos">Check Out:@(item.CheckOutDate)</p></div>
+
+        
+            </div>
+            
+    </div>
+           }
+       }
+   }
+</div>
+      
+    
+   
+   
+   
+
+   
+    

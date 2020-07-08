@@ -1,0 +1,741 @@
+/*--------------login-------------------- */
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+body{
+  background-color: #ffe4a5;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(0,0,0);
+
+}
+.logo h4{
+  padding-left: 10px;
+  border-radius: 200px;
+  
+  color: rgb(226,226,226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-family: 'Michroma', sans-serif;
+}
+.nav-links{
+  margin-bottom: 0;
+  margin-top:1px;
+  align-items: center;
+  border-right: 0.2px white dashed;
+  border-left:0.2px white dashed;
+  
+  text-transform: uppercase;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  width:40%;
+   color: rgb(226,226,226);
+}
+
+.nav-links  a{
+  color: rgb(226,226,226);
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+.nav-links li{
+  list-style: none;
+
+}
+
+#login-form{
+
+  font-family: "Times New Roman", Times, serif;
+  background-color: #FFE4E1;
+  padding:30px 0 30px 0 ;
+  margin-top:100px;
+  border-radius: 10px;
+  border: 1px   #008B8B;
+}
+.form-group{
+  text-align: center;
+  margin-left: 200px;
+  
+}
+#login-label{
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: black;
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-weight: bold;
+ 
+}
+.logins{
+
+  
+  
+  font-size: 15px;
+  font-family: "Palatino Linotype", "Book Antiqua", sans-serif;
+}
+
+#login-btn{
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  color: white;
+  border: 0.01px white solid;
+  background-color: black;
+}
+
+
+
+
+
+.form-control{
+  width: 50%;
+  
+
+}
+#login-btn:hover{
+  transition: 1s;
+  background-color: white;
+  color:black;
+  border-color: black;
+}
+/*****************************************/
+/*----------------------------------- Landing-----------------------------*/
+#landing-form{
+  font-family: "Times New Roman", Times, serif;
+  background-color: #FFE4E1;
+  padding:30px 0 30px 0 ;
+  margin-top:70px;
+  border-radius: 10px;
+  border: 1px   #008B8B;
+}
+.logins{
+  font-size: 10px;
+  font-family: "Palatino Linotype", "Book Antiqua", sans-serif;
+}
+.align{
+  
+  text-align-last:center;
+}
+.button {
+  margin: 25px;
+  padding: 20px;
+  background-color:#778899;
+  border: solid  black ;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+.action{
+  
+  text-align: center;
+}
+.dropdowns{
+  margin: 50px;
+  border:none;
+  border-radius: 10px;
+  z-index: 1;
+}
+.checkdates{
+  display:inline-block;
+}
+
+
+
+
+.select{
+    text-align: center;
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+     -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+    background-position-x: 244px;
+}
+#datepicker{
+  background-color: #ddd;
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+   height: 34px;
+   background-position-x: 244px;
+   text-align: center;
+  
+}
+#datepicker1{
+  background-color: #ddd;
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+   height: 34px;
+   background-position-x: 244px;
+   text-align: center;
+  
+}
+label{
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: black;
+  font-size: 15px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+#landing-btn{
+  margin-top: 20px;
+  letter-spacing: 2px;
+  color: white;
+  border: 0.01px white solid;
+  background-color: black;
+}
+
+#landing-btn:hover{
+  transition: 1s;
+  background-color: white;
+  color:black;
+  border-color: black;
+}
+
+/********************************************************/
+/*-------------------------Room List------------------------*/
+#room-list-form{
+  text-align:center;
+  border: solid 1px   black;
+  border-radius: 10px;
+  background-color: #FFE4E1;
+  margin-bottom: 20px;
+}
+
+select{
+
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+     -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+    background-position-x: 244px;
+}
+label{
+  text-align: center;
+  padding:20px 0 0.5px 0;
+  font-size: 20px;
+}
+.range{
+  background-color: #ddd;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+  height: 34px;
+  text-align: center;
+}
+#room-list-btn{
+  margin-top: 20px;
+  letter-spacing: 2px;
+  color: white;
+  border: 0.01px white solid;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+#room-list-btn:hover{
+  transition: 1s;
+  background-color: white;
+  color:black;
+  border-color: black;
+}
+
+
+.room-list-section{
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-top: 30px;
+  
+  text-align: center;
+  margin-top: 20px;
+  padding:10px; 
+
+
+}
+.results1{
+  background-color: #FFE4E1;
+  border-radius: 5px;
+  margin-top:10px;
+  padding-bottom: 500px;
+}
+.col-md-10{
+  border-left: 0.5px black dashed;
+
+}
+.room-list-images{
+  margin-top:5px;
+  margin-right: 20px;
+  
+  height: 100px;
+  width: 100px;
+}
+h2{
+  left:10px;
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 0px;
+  
+
+}
+.location{
+  left:8px;
+  margin-top: -5px;
+  
+  text-align: left;
+}
+.descripton{
+   margin-top: -20px;
+   line-height: 1;
+
+}
+
+.room-list-more-btn{
+  text-transform: uppercase;
+ padding: 5px;
+  
+ border-radius: 5px;
+
+  
+  
+  float: right;
+  color: black;
+  
+  letter-spacing: 2px;
+  
+ 
+  color: white;
+  border: 0.01px white solid;
+  background-color: black;
+
+}
+.room-list-more-btn:hover{
+  text-decoration: none;
+  color:black;
+  background-color: white;
+  border: 1px black solid;
+}
+.nightprice{
+  margin: 10px 0 10px 0;
+  font-size: 15px;
+  color:black;
+  border-radius: 5px;
+  padding: 1px;
+  border:0.5px black solid;
+  background-color: #ddd;
+}
+.room-list-infos{
+  font-size: 17px;
+  justify-content: space-around;
+  text-align: center;
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+.room-list-infos:first-child{
+    border-right: 0.5px black dashed;
+}
+.infos{
+  display: inline;
+  border-left: 1px black dashed;
+  border-right: 1px black dashed;
+  text-align: center;
+}
+.box{
+
+  background-color: #ddd;
+  margin-top: 32.5px;
+  font-size: 15px;
+  width: 60%;
+  text-align: center;
+ border-radius: 5px;
+ height: 25px;
+  
+}
+
+
+
+/********************************************************/
+/*-----------------------Room-----------------------------*/
+
+#title{
+  display: inline-block;
+  margin: 20px 0 2px 0;
+  width:50%;
+text-align: center;
+margin-left:200px;
+  border:0.01 black solid;
+  background-color: #ddd;
+  border-radius: 3px;
+  letter-spacing: 1.5px;
+  
+}
+#title p{
+  
+  color: black;
+  display:inline;
+  
+    padding-right:1px;
+}
+#title p:first-child{
+  border-right: 0.2px black solid;
+}
+  #titlereview{
+    margin-left: 5px;
+    
+  }
+
+
+  #room-images{
+    max-height: 400px;
+    max-width: 400px;
+    display: inline-block;
+  text-align: center;
+  padding-top: 20px;
+
+  }
+  .results{
+    background-color: #FFE4E1;
+    border-radius: 5px;
+  margin-top:10px;
+  }
+  .room-infos{
+    color: black;
+    margin: 0 150px 0 150px;
+    text-align: center;
+    
+  
+    border-radius: 7px;
+
+  }
+  .room-infos p:first-child{
+    border-left: none;
+
+  
+  }
+  .room-infos p{
+    background-color: #ddd;
+    font-weight: bold;
+    padding-left: 7px;
+    letter-spacing: 5px;
+    margin: 1px;
+    display: inline-block;
+    text-align: center;
+    border-left:3px black dashed;
+  }
+  .description{
+    border-left: 0.5px orange solid;
+    margin-left:23px;
+    padding-left: 5px;
+    
+
+  }
+  
+  #dash{
+    margin-left:23px;
+    border-bottom: 2.5px grey dashed;
+  }
+  #review{
+    padding-left: 10px;
+    margin-top: 20px;
+    border-left: 0.5px orange solid;
+    margin-left:38px;
+    
+  }
+  #review .fa-sm{
+    font-size: 33px;
+  
+
+  }
+  .hovered-stars{
+    color:grey;
+  }
+  .clicked-stars{
+    color:sandybrown;
+  }
+  #review h2{
+    font-size: 29px;
+  }
+  #addreview{
+    padding-left: 10px;
+    margin-top: 20px;
+    border-left: 0.5px orange solid;
+    margin-left:38px;
+    height: 80px;
+  }
+  .stars{
+    list-style: none;
+    display: inline-block;
+  }
+  #addreview a{
+    border:2px ;
+    border-radius: 3px;
+    color: white;
+    background-color: orange;
+    padding:3px;
+  }
+
+ .favor-btn{
+  text-transform: uppercase;
+  padding: 5px;
+   
+  border-radius: 5px;
+ 
+   
+   padding: -20px;
+   
+   float: right;
+   
+   
+   letter-spacing: 2px;
+   
+  
+   color: red;
+   border: 1px red solid;
+   background-color: black;
+ }
+ .head{
+   text-align: center;
+   text-decoration: underline;
+   padding: 5px;
+ }
+ .title{
+   padding: 20px;
+   margin-top: 210px;
+   background-color: antiquewhite;
+   border-radius: 20px;
+   text-align: center;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   border: 4px rgb(209, 166, 166) solid;
+ }
+ .favor-btn:hover{
+  letter-spacing: 2px;
+ text-decoration: none;
+  color:black;
+  background-color: red;
+  border: 1px black solid;
+ }
+  #addreview a:hover{
+    text-decoration: none;
+  }
+  .welcome{
+    margin-top: 100px;
+    height: 700px;
+    background-image:url("https://juliaelena.com/wp-content/uploads/travel-4011026_1920.jpg");
+    width: 100%; 
+  }
+  .star-size{
+    font-size:15px;
+  }
+  #newreview{
+    background-color: seagreen;
+    border-bottom: 0.2px black solid;
+    border-top: 0.2px black solid;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin-right: 300px;
+    
+
+  }
+  .reviewer{
+    font-size: 28px;
+  }
+  #comment{
+    display: block;
+    margin-bottom: 10px;
+    width: 500px;
+    background-color: #ddd;
+    border-radius: 3px;
+    border:none;
+    padding: 5px;
+    padding-right: 30px;
+
+  }
+  #room-btn{
+    display: block;
+  letter-spacing: 2px;
+  color: white;
+  border: 0.01px white solid;
+  background-color: black;
+  }
+  #room-btn:hover{
+  transition: 1s;
+  background-color: white;
+  color:black;
+  border-color: black;
+}
+
+/************************************************************/
+
+/*-------------------My profile-------------------------*/
+
+h4{
+
+  text-align: center;
+  border:none;
+  color:orange;
+  
+  margin-top: 25px;
+}
+
+#my-bookings{
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding:10px; 
+  text-decoration: underline;
+  letter-spacing: 2px;
+
+
+}
+
+.room_images{
+  padding-right: 2px;
+  border-right: 0.5px red solid;
+  height: 100px;
+  width: 100px;
+}
+h2{
+  left:10px;
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 0px;
+  
+
+}
+.location{
+  left:8px;
+  margin-top: -5px;
+  
+  text-align: left;
+}
+.descripton{
+   margin-top: -20px;
+   line-height: 1;
+
+}
+
+#mybookings{
+  display: inline-block;
+  margin: 20px 0 2px 0;
+  width:50%;
+padding:10px;
+margin-left:200px;
+  border:0.01px black solid;
+  font-size: 30px;
+  border-radius: 3px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.block{
+  background-color:#FFE4E1 ;
+  padding:10px;
+  border:1px black solid;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.lis li{
+  list-style: none;
+
+}
+.my-profile-more-btn{
+text-transform: uppercase;
+ padding: 5px;
+  
+ border-radius: 5px;
+
+  margin-bottom: -10000px;
+  margin-top: -20px;
+  
+  float: right;
+  color: black;
+  
+  letter-spacing: 2px;
+  
+ 
+  color: white;
+  border: 0.01px white solid;
+  background-color: black;
+
+}
+.my-profile-more-btn:hover{
+  text-decoration: none;
+  color:black;
+  background-color: white;
+  border: 0.01px black solid;
+}
+.nightprice{
+  margin: 10px 0 10px 0;
+  font-size: 15px;
+  color:cyan;
+  border:0.5px white solid;
+  background-color: black
+}
+.my-profile-infos{
+  font-size: 17px;
+  justify-content: space-around;
+  text-align: center;
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+.my-profile-infos:first-child{
+    border-right: 0.5px black dashed;
+}
+.box{
+  margin-top: 32.5px;
+  font-size: 15px;
+  width: 60%;
+  text-align: center;
+  border:0.5px black solid;
+}
+.box1{
+  margin-top: 3px;
+  margin-left: 50px;
+  font-size: 15px;
+  width: 40%;
+  text-align: center;
+  border:0.5px black solid;
+  border-radius: 20px;
+  background-color: black;
+  color: #008B8B;
+}
+.favorite{
+  text-align: center;
+}

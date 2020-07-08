@@ -1,0 +1,42 @@
+﻿@model  Hotel.Models.RoomListModel
+@{
+    ViewData["Title"] = "Search";
+}
+<div class="container container-fluid img">
+    <div class="row center-md ">
+      <div class=" col-md-8 offset-2">
+
+        <form  class="action" id="landing-form" asp-action="RoomList">
+        	<label for="exampleInputEmail1">Choose City</label> <br>
+         	<select name="city"   id="exampleInputEmail1" class=" align">
+				 <option selected ><h1>Any</h1></option>
+	 
+			     @foreach (var City in Model.City)
+				 {				 
+			    <option  >@(City)</option>
+				 }
+			    	  
+			  </select><br>
+			  
+			 <label >Choose Room type</label>  <br>
+			  <select name="select"  class="align">
+			    <option selected ><h1>Any</h1></option>
+			
+				 @foreach (var room1 in Model.RoomType)
+		 		{
+			    <option >@(room1)</option>
+				 }
+			  </select><br>
+			  <label for="exampleInputEmail1">Check-in Date</label><br> 
+			  <input type="text" name="checkin" id="datepicker" value="Check-in Date">
+			  <br>
+			  <label for="exampleInputEmail1">Check-out Date</label><br>
+			  <input type="text" name="checkout" id="datepicker1" value="Check-out Date"> 
+			  <br>
+
+           <button type="submit" id="landing-btn" class="btn btn-outline-primary">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+

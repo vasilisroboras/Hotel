@@ -1,0 +1,77 @@
+﻿
+@model IEnumerable<Hotel.Models.Room>
+
+@{
+    ViewData["Title"] = "RoomList";
+}
+
+<div class="container">
+	<div class="row">
+	  <div class="col-md-4">
+	  	<h5 class="room-list-section">ADVANCED SEARCH</h5>
+	  	 <form class="action" id="room-list-form" asp-action="RoomList">
+	  	 	<label for="exampleInputEmail1">Count of guests</label> <br>
+         	<select name="countofguests" id="exampleInputEmail1" class="select align">
+			    <option selected ><h1>@ViewBag.countguests</h1></option>
+			    <option value="1">1</option>
+			    <option value="2">2</option>
+			    <option value="3">3</option>
+			  </select><br>
+        	<label for="exampleInputEmail1">Choose City</label> <br>
+         	<select name="city" id="exampleInputEmail1" class="select align">
+			    <option selected ><h1>@ViewBag.cityoption</h1></option>
+			    <option  >Athens</option>
+				<option  >Thessaloniki</option>
+				<option  >Kavala</option>
+				<option  >Santorini</option>
+			  </select><br>
+			 <label for="exampleInputEmail1">Choose Room type</label>  <br>
+			  <select name="select" class="select align">
+			    <option selected ><h1>@ViewBag.roomtypeoption</h1></option>
+			    <option >1</option>
+			    <option >2</option>
+			    <option >3</option>
+				<option >4</option>
+			  </select><br>
+
+			<label >Price range</label> <br>
+			<input class="range" name="lowprice" value="@ViewBag.smallprice" size="7" min="0" max="5000"type="int">-
+			<input class="range" name="highprice" value="@ViewBag.bigprice" size="7" min="0" max="5000"type="int"><br>
+@ViewBag.roomtypeoption1 
+			<label >Check-in Date</label><br> 
+			  <input  type="text"  name="checkin" id="datepicker" value="@ViewBag.checkinoption"><br>
+			  <label >Check-out Date</label><br> 
+			  <input  type="text" name="checkout" id="datepicker1" value="@ViewBag.checkoutoption"><br>
+
+           <button type="submit" id="room-list-btn" class="btn btn-outline-primary">Submit</button>
+       </form>
+    </div>
+		
+	 <div class="col-md-8 ">
+	 	<h5 class="room-list-section">Search Result</h5>
+		 @foreach (var room in Model)
+		 {
+	 	<div class="row results">
+	 		<div class="col-md-2">
+	 			<img class="room-list-images" src="~/image/@(room.Photo)">
+	 			<p class="nightprice">Per Night:@(room.Price)</p>
+	 		</div>
+	 		<div class="col-md-10">
+	 			<h2>@(room.Name)</h2>
+				 <p class="location">
+	 				@(room.Location)
+	 			</p>
+	 			<p class="descripton">
+	 				@(room.ShortDescription)
+	 			</p>
+	 			<p ><a class="room-list-more-btn" asp-route-roomid="@(room.RoomId)" asp-route-checkin="@ViewBag.checkinoption"  asp-route-checkout="@ViewBag.checkoutoption"  asp-action="Room"  >More</a></p>
+	 			<div class="box"><p class="room-list-infos">Count of Guests:@(room.CountOfGuests)</p><p class="room-list-infos">Room Type:@(room.RoomType)</p></div>
+
+	 		</div>
+	 	</div>
+		 }
+	 
+	 	
+	 </div>
+	</div>
+</div>
